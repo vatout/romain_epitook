@@ -85,6 +85,24 @@ int	my_alpha_speed(void)
   return (0);
 }
 
+int	my_alpha_ongle(char *z)
+{
+	int		i;
+
+	i = 0;
+	while (z[i] != '\0')
+	{
+		if (z[i] >= 97 && z[i] <= 122)
+			my_putchar(z[i] - 32);
+		else if (z[i] >= 65 && z[i] <= 90)
+			my_putchar(z[i] + 32);
+		else
+			my_putchar(z[i]);
+		i = i + 1;
+	}
+	return	(0);
+}
+
 int	main()
 {
   my_alpha();
