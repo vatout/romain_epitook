@@ -143,6 +143,33 @@ int my_chaquefindemot_maj(char *z)
 	return  (0);
 }
 
+
+int my_unMotSur2_maj(char *z)
+{
+    int    i;
+    int    a;
+
+    i = 0;
+    a = 1;
+	while (z[i] != '\0')
+	{
+        if (a == 1 && z[i] >= 97 && z[i] <= 122)
+            my_putchar(z[i] - 32);
+        else
+            my_putchar(z[i]);
+        if (z[i] == 32)
+        {
+            if(a)
+                a = 0;
+            else
+                a = 1;
+            my_putchar(z[i]);
+        }
+        i = i + 1;
+	}
+	return  (0);
+}
+
 int	main()
 {
   my_alpha();
