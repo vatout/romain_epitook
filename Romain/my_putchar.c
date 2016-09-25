@@ -103,6 +103,30 @@ int	my_alpha_ongle(char *z)
 	return	(0);
 }
 
+int my_chaquedebutdemot_maj(char *z)
+{
+    int    i;
+    int    a;
+
+    i = 0;
+    a = 1;
+	while (z[i] != '\0')
+	{
+        if (a == 1 && z[i] >= 97 && z[i] <= 122)
+            my_putchar(z[i] - 32);
+        else
+            my_putchar(z[i]);
+        a = 0;
+        if (z[i] == 32)
+        {
+            a = 1;
+            my_putchar(z[i]);
+        }
+        i = i + 1;
+	}
+	return  (0);
+}
+
 int	main()
 {
   my_alpha();
