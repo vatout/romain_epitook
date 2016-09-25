@@ -127,6 +127,22 @@ int my_chaquedebutdemot_maj(char *z)
 	return  (0);
 }
 
+int my_chaquefindemot_maj(char *z)
+{
+    int    i;
+
+    i = 0;
+	while (z[i] != '\0')
+	{
+        if (z[i] >= 97 && z[i] <= 122 && z[i+1] == 32 || z[i+1] == '\0')
+            my_putchar(z[i] - 32);
+        else
+            my_putchar(z[i]);
+        i = i + 1;
+	}
+	return  (0);
+}
+
 int	main()
 {
   my_alpha();
